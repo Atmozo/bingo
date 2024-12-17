@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Typing Effect */
+.typing-text::after {
+  content: "|";
+  animation: blink 0.6s infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Float Animation for Random Texts */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Border Blink Animation */
+@keyframes border-blink {
+  0% {
+    border-color: #a11b9b;
+  }
+  50% {
+    border-color: #0066ff;
+  }
+  100% {
+    border-color: #659e36;
+  }
+}
+
+.animate-border-blink {
+  animation: border-blink 1s infinite;
+}
