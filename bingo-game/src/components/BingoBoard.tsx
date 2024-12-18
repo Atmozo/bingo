@@ -22,7 +22,7 @@ const BingoBoard = ({
       }`}
     >
       <h2 className="text-xl font-bold mb-4 text-center text-white">{player}</h2>
-      <div className="grid grid-cols-5 gap-3">
+      <div className="grid grid-cols-5 gap-3 ">
         {numbers.map((number) => {
           const markedBy = markedNumbers.find((entry) => entry.number === number)?.player;
           const isMarkedByCurrentPlayer = markedBy === player;
@@ -31,7 +31,7 @@ const BingoBoard = ({
             <button
               key={number}
               data-number={number}
-              className={`w-16 h-16 flex items-center justify-center border rounded transition duration-200 ${
+              className={`w-16 h-16 flex items-center justify-center border rounded transition duration-200 boarder-1 animate-border-blink ${
                 markedBy
                   ? isMarkedByCurrentPlayer
                     ? "bg-opacity-70 text-white"
